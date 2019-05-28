@@ -14,6 +14,8 @@ entity polynom is
 		clk : in std_logic;
 
 		-- TODO: Your Interface here
+		x	: in integer;
+		fx	: out integer
 	);
 end;
 
@@ -33,4 +35,5 @@ architecture behav of polynom is
 		);
 
 	-- TODO: Add your Implementation here
+	fx <= POLY_COEFF(4) * x**4 - POLY_COEFF(3) * x**3 + POLY_COEFF(2) * x**2 - POLY_COEFF(1) * x + POLY_COEFF(0);
 end architecture;

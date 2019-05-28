@@ -8,7 +8,7 @@ use ieee.math_real.all;
 entity polynom_tb is
 end entity;
 
-architecture behav of polynom_tb its
+architecture behav of polynom_tb is
 	
 	component polynom is
 		port (
@@ -17,6 +17,8 @@ architecture behav of polynom_tb its
 			clk : in std_logic;
 
 			-- TODO: place your modules Interface here
+			x	: in integer;
+			fx	: out integer;
 		);
 	end component;
 
@@ -34,5 +36,6 @@ architecture behav of polynom_tb its
 		);
 
 	-- TODO: Implement your Testbench here
+	x <= 1;
 	
 end;
